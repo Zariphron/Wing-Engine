@@ -9,11 +9,11 @@ find_package(assimp REQUIRED)
 
 include_directories(C:/VulkanSDK/1.3.261.1/Include)
 include_directories(${CMAKE_SOURCE_DIR}/libs/stb-master)
-
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
 
 # Add source to this project's executable.
-add_executable (src "main.cpp" "main.h")
+add_executable (src "main.cpp" "../include/main.h" "../include/Headers.h" "VulkanApplication.cpp" "VulkanDescriptor.cpp"  "VulkanInstance.cpp" "VulkanPipeline.cpp" "VulkanRenderer.cpp"  "VulkanSwapChain.cpp" "Camera.cpp" "Object.cpp" "InputManager.cpp" "ModelLoader.cpp" "SwapChainManager.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET src PROPERTY CXX_STANDARD 20)
